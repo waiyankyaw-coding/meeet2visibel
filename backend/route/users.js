@@ -1,8 +1,9 @@
 const express = require('express');
-const usersController = require('../controller/usersController')
+const requireRole = require('../middleware/allowrole');
+const usersController = require('../controller/usersController');
 const router = express.Router();
 router.get('/users',usersController.userList);
-router.post('/users',usersController.createUser);
-router.patch('/users/:id/role', usersController.updateUserRole);
-router.delete('/users/:id', usersController.deleteUser);
+router.post('/users', requireRole(['admin']),usersController.createUser);
+router.patch('/users/:id/role', requireRole(['admin']), usersController.updateUserRole);
+router.delete('/users/:id', requireRole(['admin']), usersController.deleteUser);
 module.exports =router;
