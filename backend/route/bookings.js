@@ -1,5 +1,4 @@
 const express = require('express');
-const requireRole = require('../middleware/allowrole');
 const router = express.Router();
 const bookingController = require('../controller/bookingsController');
 router.get('/bookings', bookingController.bookingList);

@@ -1,5 +1,4 @@
 const express = require('express');
-const requireRole = require('../middleware/allowrole');
 const usersController = require('../controller/usersController');
 const router = express.Router();
 router.get('/users',usersController.userList);
