@@ -8,7 +8,9 @@ const mongoose = require('mongoose');
 const mongooURL = process.env.DB;  // mongoDb url 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ['https://meeting.waiyankyaw.com', 'https://www.meeting.waiyankyaw.com'],
+}));
 app.use(morgan('dev'));
 app.use(express.json());
 

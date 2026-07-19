@@ -7,8 +7,8 @@
 
 ## Live Demo
 
-- Frontend: `<deployed frontend URL>`
-- Backend API: `<deployed backend URL>`
+- Frontend: `https://meeting.waiyankyaw.com`
+- Backend API: `https://meeet2visibel.onrender.com/api`
 
 ## Roles and Permissions
 
@@ -82,7 +82,7 @@ exists.
 |--------|-------------------|--------|---------------------------------------|
 | GET    | /api/users        | All    | List all users                        |
 | POST   | /api/users        | Admin  | Create a new user                     |
-| PATCH  | /api/users/:id    | Admin  | Update a user's role                  |
+PATCH /api/users/:id/role   | Admin  | Update a user's role                  |
 | DELETE | /api/users/:id    | Admin  | Delete a user, cascades to bookings   |
 
 ### Bookings
